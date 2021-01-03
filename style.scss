@@ -35,7 +35,11 @@
             position: relative;
             h1 {
                 font-size: 3em;
-                background: repeating-linear-gradient(15deg, #34ee45 6%, #f33933 10%, #3456aa 20%, #16d3da 35%, #3456aa 50%);
+                background: repeating-linear-gradient(20deg, #3456aa 6%, #16d3da 25%, #f33933 5%, #3456aa 40%);
+                // background: repeating-linear-gradient(15deg, #34ee45 6%, #f33933 10%, #3456aa 20%, #16d3da 35%, #3456aa 50%);
+                background-repeat: repeat;
+                background-size: cover;
+                filter: drop-shadow(0px 1px 2px rgb(26, 25, 25));
                 -webkit-background-clip: text;
                 color: transparent;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
