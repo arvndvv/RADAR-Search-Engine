@@ -11,7 +11,7 @@ const Search = async(searchTerm) => {
         try {
             this.searchTerm = searchTerm;
             this.maxChars = getMaxChars();
-            console.log(maxChars)
+            // console.log(maxChars)
             this.noOfResults = 20;
             this.wiki = `https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${this.searchTerm}&gsrlimit=${this.noOfResults}&prop=pageimages|extracts&exchars=${this.maxChars}&exintro&explaintext&exlimit=max&format=json&origin=*`
             this.url = encodeURI(this.wiki);
