@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* .unset {
+  all: unset;
+  cursor: pointer;
+}
+
+* .unset:visited {
+  color: #343434;
+}
+
+* .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
+  background: #fefefe;
+}
+
+* .container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding: 1em;
+  position: relative;
+}
+
+* .container header h1 {
+  font-size: 3em;
+  background: repeating-linear-gradient(15deg, #34ee45 6%, #f33933 10%, #3456aa 20%, #16d3da 35%, #3456aa 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* .container header h3 {
+  position: absolute;
+  font-size: 0.7em;
+  color: #888;
+  bottom: 1em;
+}
+
+* .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em auto;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  width: 50%;
+  padding: 0 0 0 3em;
+  color: #333;
+}
+
+* .container form .searchTerm {
+  -webkit-box-flex: 20;
+      -ms-flex: 20;
+          flex: 20;
+  font-size: 1.1em;
+  background: #fefefe;
+  position: relative;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: 2px solid #343434;
+}
+
+* .container form .searchTerm:focus {
+  border-color: #3456aa;
+}
+
+* .container form .search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5em;
+  position: relative;
+  font-size: 1.1em;
+  right: 1.7em;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+* .container form .search:hover {
+  color: #3456aa;
+}
+
+* .container form .reset {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  position: relative;
+  right: 1.7em;
+  padding: 0.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+* .container form .reset:hover {
+  color: #f33933;
+}
+
+* .container form .reset.showrst {
+  opacity: 1;
+  visibility: visible;
+}
+
+* .container header.initial {
+  font-size: 1.8em;
+  margin-top: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  * .container header.initial {
+    margin-top: 40%;
+  }
+}
+
+* .container form.initial {
+  width: 80%;
+}
+
+* .container .results {
+  margin: 1em;
+  padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  * .container .results {
+    padding: 0.5em;
+  }
+}
+
+* .container .results .error {
+  color: #f33933;
+}
+
+* .container .results * {
+  text-decoration: none;
+}
+
+* .container .results .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #343434;
+  margin: 1.5em;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  * .container .results .result {
+    margin: 5px !important;
+  }
+}
+
+* .container .results .result:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+* .container .results .result:hover {
+  color: #3456aa;
+  border-color: rgba(0, 0, 255, 0.2);
+}
+
+* .container .results .result .title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+* .container .results .result .abstract {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+
+* .container .results .result .abstract .img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  * .container .results .result .abstract .img {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+
+* .container .results .result .abstract .img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+* .container .results .result .abstract .summary {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+* .container footer {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background: #fefefe;
+  bottom: 0;
+  gap: 5px;
+  padding: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .container footer h5 {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #888;
+}
+
+* .container footer .fa-heart {
+  color: #f33933;
+  position: relative;
+}
+
+* .container footer .fa-heart:after {
+  content: "\f004";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  opacity: 1;
+  -webkit-animation: heart 2.5s ease infinite;
+          animation: heart 2.5s ease infinite;
+  font-weight: 600;
+}
+
+@-webkit-keyframes heart {
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes heart {
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
